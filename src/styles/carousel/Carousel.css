@@ -1,0 +1,14 @@
+.text-container {
+    display: 'flex';
+    justify-content: 'center';
+    background-color: blue;
+    align-content: 'center';
+}
+
+.title {
+    display: 'flex';
+    flex: 1;
+    justify-content: 'center';
+    background-color: red;
+    align-content: 'center';
+}
