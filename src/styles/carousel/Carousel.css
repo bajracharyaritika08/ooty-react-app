@@ -12,3 +12,8 @@
     background-color: red;
     align-content: 'center';
 }
+
+::selection {
+    background-color: rgb(2, 118, 2);
+    color: white;
+}

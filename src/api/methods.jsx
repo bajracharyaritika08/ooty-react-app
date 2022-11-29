@@ -4,7 +4,6 @@ class ApiService {
         return new Promise(async(resolve, reject) => {
             try {
                 const response = await ApiRequest.post(path, body, { headers });
-
                 resolve(response.data);
             } catch (err) {
                 reject(err);
@@ -16,7 +15,6 @@ class ApiService {
         return new Promise(async(resolve, reject) => {
             try {
                 const response = await ApiRequest.get(path, { headers });
-
                 resolve(response.data);
             } catch (err) {
                 reject(err);
@@ -27,7 +25,6 @@ class ApiService {
         return new Promise(async(resolve, reject) => {
             try {
                 const response = await ApiRequest.patch(path, body, { headers });
-
                 resolve(response.data);
             } catch (err) {
                 reject(err);
@@ -52,7 +49,6 @@ class ApiService {
                 const response = await ApiRequest.delete(path, {
                     headers: headers && {}
                 });
-
                 resolve(response.data);
             } catch (err) {
                 reject(err);

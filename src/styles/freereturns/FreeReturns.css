@@ -1,0 +1,30 @@
+.freereturn_main_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.freereturns_heading {
+    font-size: 48px;
+    font-weight: 700;
+    font-family: "PlayFair Display", serif;
+    color: rgb(36, 36, 36);
+    padding-top: 80px;
+}
+
+.try {
+    background-color: bisque;
+}
+
+.try_p {
+    background-color: cornflowerblue;
+}
+
+.try_image {
+    background-color: azure;
+}
+
+.freetrial_container {
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+}
