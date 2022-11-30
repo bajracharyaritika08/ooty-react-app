@@ -1,6 +1,8 @@
 .freereturn_main_container {
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 70px;
 }
 
 .freereturns_heading {
@@ -11,20 +13,38 @@
     padding-top: 80px;
 }
 
-.try {
-    background-color: bisque;
-}
-
-.try_p {
-    background-color: cornflowerblue;
-}
-
-.try_image {
-    background-color: azure;
-}
-
 .freetrial_container {
     display: flex;
     flex-direction: row;
-    background-color: red;
+}
+
+.trail_heading {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.freetrail_content_container {
+    padding: 10px 10px;
+    line-height: 30.6px;
+}
+
+.trial_title {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    line-height: 37.4px;
+    margin-block-end: 5px;
+    letter-spacing: 1px;
+}
+
+.freetrial_container {
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-top: 50px;
+}
+
+.trial_p {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
 }

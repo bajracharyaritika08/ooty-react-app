@@ -1,9 +1,7 @@
 import React from 'react'
-import { FaShoppingCart,FaStar,FaRegStar,FaStarHalfAlt} from "react-icons/fa";
-import { productRating } from '../utils/Main';
-import ooty_px1 from '../images/ooty_px1.jpg'
-import ooty_px2 from '../images/ooty_px2.jpg'
-import productOne from '../images/productOne.jpg'
+import { FaShoppingCart} from "react-icons/fa";
+import { pricing, productRating } from '../utils/Main';
+
 import '../styles/products/Products.css'
 import { AddToCartBtn } from '../common/AddToCartBtn'
 export const ProductCard = (props) => {
@@ -21,6 +19,9 @@ export const ProductCard = (props) => {
                         productRating(items.rating)
                         }
                     </div>
+                    <p className='price'>{
+                        pricing(items.price)
+                    }</p>
                     <AddToCartBtn icon=<FaShoppingCart/> title="Add to cart" />
                 </div>
             </div>

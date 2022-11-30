@@ -15,7 +15,7 @@ export const FreeRetruns = () => {
     },
     {
         id:2,
-        image:happy_medium_1_180x,
+        image:weight_loss_medium_1_180x,
         title:"Weight Loss",
         description:"Pellentesque euismod vestibulum sollicitudin. Nunc consequat.",
     },
@@ -27,7 +27,7 @@ export const FreeRetruns = () => {
     },
     {
         id:4,
-        image:weight_loss_medium_1_180x,
+        image:happy_medium_1_180x,
         title:"Makes you Happy",
         description:"Cras sagittis sapien tellus, lacinia nunc suscipit vitae. Integer eget lectus",
     },
@@ -36,23 +36,23 @@ export const FreeRetruns = () => {
     <div className='freereturn_main_container'>
 
         <div className="freereturns_heading_container">
-            <h3 className="">01 - Year Trial, Free Returns</h3>
+            <h3 className="trail_heading">01 - Year Trial, Free Returns</h3>
         </div>
+                <div className="freetrial_container">
         {
           freeReturnSection.map((items)=>{
             return(
             
-                <div className="freetrial_container">
                     <div className="freetrail_content_container">
-                        <img className='try_image' src={items.image} alt="ICONS" />
-                        <h2 className='try'>{items.title}</h2>
-                        <p className='try_p'>{items.description}</p>
+                        <img className='trial_icons' src={items.image} alt="ICONS" />
+                        <h2 className='trial_title'>{items.title}</h2>
+                        <p className='trial_p'>{items.description}</p>
                     </div>
-                </div>
              
             )
           })
         }
+                </div>
     </div>
   )
 }

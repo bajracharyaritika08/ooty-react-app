@@ -1,4 +1,5 @@
-import { FaShoppingCart,FaStar,FaRegStar,FaStarHalfAlt} from "react-icons/fa";
+import { FaStar,FaRegStar,FaStarHalfAlt} from "react-icons/fa";
+import '../styles/products/Products.css'
 export const productRating =(rating)=>{
     switch(rating){
         case '1':
@@ -60,6 +61,22 @@ export const productRating =(rating)=>{
                     <FaStar/>
                     <FaStar/>
                 </div>
+            )
+    }
+}
+export const pricing =(price)=>{
+    switch(price){
+        case '180.00':
+            return(
+                <p className='price'>Rs 180.00  <s className="strike">Rs. 200.00</s> </p>
+            )
+        case '280.00':
+            return(
+                <p className='price'>Rs. 280.00</p>
+            )
+        case '360.00':
+            return(
+                <p className='price'>Rs. 360.00</p>
             )
     }
 }

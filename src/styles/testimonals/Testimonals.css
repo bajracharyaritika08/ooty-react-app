@@ -1,0 +1,53 @@
+.testimonals_container {
+    background-image: url('../../images/herbal-tea-bg_1.jpg');
+    height: 110vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.testimonals_heading {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 48px;
+    color: white;
+    word-spacing: 1.5px;
+}
+
+.slider_container {
+    height: 400.8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.testmonials_image {
+    border-radius: 50%;
+}
+
+.testimonal_image {
+    position: relative;
+    bottom: -20%;
+    z-index: 999;
+}
+
+.testimonal_image,
+.testimonals_says {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonals_says {
+    background-color: rgb(35, 35, 35);
+    width: 50%;
+    height: 336px;
+}
+
+.testimonal_text {
+    color: rgb(255, 255, 255);
+}

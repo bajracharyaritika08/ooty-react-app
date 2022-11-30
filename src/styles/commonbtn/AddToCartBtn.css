@@ -9,5 +9,13 @@
     padding-right: 30px;
     text-align: center;
     border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
     font-family: "Nunito Sans", sans-serif;
+}
+
+.addtocart_btn:hover {
+    background-color: rgb(108, 176, 94);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }

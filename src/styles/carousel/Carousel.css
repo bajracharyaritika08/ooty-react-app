@@ -1,19 +1,94 @@
-.text-container {
-    display: 'flex';
-    justify-content: 'center';
-    background-color: blue;
-    align-content: 'center';
-}
-
-.title {
-    display: 'flex';
-    flex: 1;
-    justify-content: 'center';
-    background-color: red;
-    align-content: 'center';
-}
-
 ::selection {
     background-color: rgb(2, 118, 2);
     color: white;
+}
+
+
+/* Assigning Images */
+
+.first_slide {
+    background-image: url('../../images/slider_image_hand.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+}
+
+.second_slide {
+    background-image: url('../../images/slider_image_lady_smile.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.third_slide {
+    background-image: url('../../images/slider_image_tea_bag.jpg');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+/* Making sections */
+
+.first_slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 6.5rem;
+}
+
+.second_slide {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    line-height: 6.5rem;
+}
+
+.carousel_header_first {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel_heading_secA {
+    font-size: 72px;
+    font-weight: 700;
+    font-family: "Playfair Display", serif;
+    color: white;
+    margin-block-end: 10px;
+    margin-block-start: 10px;
+}
+
+.carousel_description_secA {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    line-height: 30.6px;
+    font-family: "Nunito Sans", sans-serif;
+    padding-left: 350px;
+    padding-right: 350px;
+}
+
+.carousel_heading_secB {
+    font-size: 72px;
+    font-weight: 700;
+    font-family: "Playfair Display", serif;
+    color: rgb(0, 0, 0);
+    margin-block-end: 10px;
+    margin-block-start: 10px;
+}
+
+.carousel_description_secB {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    line-height: 30.6px;
+    font-family: "Nunito Sans", sans-serif;
+    padding-left: 350px;
+    padding-right: 350px;
 }

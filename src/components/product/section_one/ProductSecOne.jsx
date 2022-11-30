@@ -1,5 +1,4 @@
 import React from 'react'
-import { AddToCartBtn } from '../../../common/AddToCartBtn'
 import ooty_px1 from '../../../images/ooty_px1.jpg'
 import ooty_px2 from '../../../images/ooty_px2.jpg'
 import productOne from '../../../images/productOne.jpg'
@@ -7,9 +6,9 @@ import ootytea from '../../../images/ootytea.jpg'
 import product_greentea from '../../../images/product_greentea.jpg'
 import p5 from '../../../images/p5.jpg'
 import p6 from '../../../images/p6.jpg'
+import ooty_02 from '../../../images/ooty_02.jpg'
+import ooty_03 from '../../../images/ooty_03.jpg'
 import '../../../styles/products/Products.css'
-import { FaShoppingCart,FaStar,FaRegStar,FaStarHalfAlt} from "react-icons/fa";
-import { productRating } from '../../../utils/Main'
 import { ProductCard } from '../../../common/ProductCard'
 import { useState } from 'react'
 import { productService } from '../../../api/productService'
@@ -38,7 +37,7 @@ const productHeader = [
         traders: "Kashmire Traders",
         title: "Classic Black Tea",
         rating: "5",
-        price: "Rs. 360.00",
+        price: "360.00",
         category:"sectionA",
     },
     {
@@ -47,7 +46,7 @@ const productHeader = [
         traders: "Tea Traders",
         title: "Green Tea",
         rating: "4.5",
-        price: "Rs. 180.00",
+        price: "180.00",
         category:"sectionA",
         },
     {
@@ -56,7 +55,7 @@ const productHeader = [
         traders: "Kashmire Traders",
         title: "Oolong Tea",
         rating: "4",
-        price: "Rs. 360.00",
+        price: "360.00",
         category:"sectionB",
     },
     {
@@ -65,25 +64,25 @@ const productHeader = [
         traders: "Tea Traders",
         title: "Royal Green Tea",
         rating: "5",
-        price: "Rs. 180.00",
+        price: "180.00",
         category:"sectionB",
         },
     {
         id: 5,
-        image: p5,
+        image: ooty_02,
         traders: "Premium Traders",
         title: "Premium Tea",
         rating: "5",
-        price: "Rs. 280.00",
+        price: "280.00",
         category:"sectionC",
     },
     {
         id: 6,
-        image: p6,
+        image: ooty_03,
         traders: "Tea Traders",
         title: "Black Tea",
         rating: "5",
-        price: "Rs. 180.00",
+        price: "180.00",
         category:"sectionC",
         },
 ]
@@ -104,7 +103,7 @@ const fetchProductsData =()=>{
 }
 useEffect(()=>{fetchProductsData()},[])
   return (
-    <div>
+    <div className='main_product_container'>
     {loading ? <h2>Loading...</h2>:
      <div className="product_container">
     {
@@ -112,10 +111,10 @@ useEffect(()=>{fetchProductsData()},[])
             return(
         <div className="product_title">
                 <p className='subtitle'>{items.subTitle}</p>
-                <h2 className='product_header'>{items.heading.headingThree}</h2>
+                <h2 className='product_header'>{items.heading.headingOne}</h2>
                 <div className="two_row_product">
             {
-                data.filter((items)=>items.category === "sectionC").map((items)=>{
+                data.filter((items)=>items.category === "sectionA").map((items)=>{
                 return(
                     <ProductCard items={items} />
                 )
@@ -130,7 +129,7 @@ useEffect(()=>{fetchProductsData()},[])
         details.map((items)=>{
             return(
         <div className="imagecontainer_r">
-            <img src={items.coverImage.coverImageThree} alt="Cover Image" className='coverImage' />
+            <img src={items.coverImage.coverImageOne} alt="Cover Image" className='coverImage' />
         </div>
             )
         })
@@ -143,12 +142,21 @@ useEffect(()=>{fetchProductsData()},[])
     {
         details.map((items)=>{
             return(
+        <div className="imagecontainer_r">
+            <img src={items.coverImage.coverImageTwo} alt="Cover Image" className='coverImage' />
+        </div>
+            )
+        })
+    }
+    {
+        details.map((items)=>{
+            return(
         <div className="product_title">
                 <p className='subtitle'>{items.subTitle}</p>
                 <h2 className='product_header'>{items.heading.headingThree}</h2>
                 <div className="two_row_product">
             {
-                data.filter((items)=>items.category === "sectionC").map((items)=>{
+                data.filter((items)=>items.category === "sectionB").map((items)=>{
                 return(
                     <ProductCard items={items} />
                 )
@@ -159,15 +167,7 @@ useEffect(()=>{fetchProductsData()},[])
             )
         })
     }
-    {
-        details.map((items)=>{
-            return(
-        <div className="imagecontainer_r">
-            <img src={items.coverImage.coverImageThree} alt="Cover Image" className='coverImage' />
-        </div>
-            )
-        })
-    }
+    
     </div>
     {/* Here starts the third section */}
     <div className="product_container">
