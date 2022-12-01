@@ -22,49 +22,56 @@ const testimonalsData =[
 
   }
 ]
+
 export default class Testimonals extends Component {
   render() {
     const settings = {
-      className: "center",
       infinite: true,
-      centerPadding: "60px",
+      speed: 500,
       slidesToShow: 1,
-      swipeToSlide: true,
-      afterChange: function(index) {
-        console.log(
-          `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
-        );
-      }
+      slidesToScroll: 1
     };
     return (
       <div className="testimonals_container">
-        <h2 className="testimonals_heading">Testimonials</h2>
+        <h2 className="testimonals_heading"> Testimonals</h2>
         <Slider {...settings}>
-           <div className="slider_container">
-                <div className="testimonal_image">
-                  <img src={testimonals_1} alt="Testimonals Image" className="testmonials_image" /> 
+          <div className="testimonal_says">
+                <div className="testimonal_image_wrapper">
+                  <img src={testimonals_1} alt="image first" className="testmonials_image"/>
                 </div>
-                <div className="testimonals_says">
-                  <p className="testimonal_text">A testimonial is effectively a review or recommendation from a client, letting other people know how your products or services benefitted them.</p>
+                <div className="testimonals_desc">
+                  <p className="testimonals_text">"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.</p>
+                  <div className="line_divider"></div>
+                <div className="name_wrapper">
+                  <h2 className="name_test">Juliya Morli</h2>
+                </div>
+                </div>
+                
+          </div>
+          <div className="testimonal_says">
+                <div className="testimonal_image_wrapper">
+                  <img src={testimonals_2} alt="image first" className="testmonials_image"/>
+                </div>
+                <div className="testimonals_desc">
+                  <p className="testimonals_text">"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.</p>
+                  <div className="line_divider"></div>
+                <div className="name_wrapper">
+                  <h2 className="name_test">Suprim Ito</h2>
+                </div>
+                </div>
+          </div><div className="testimonal_says">
+                <div className="testimonal_image_wrapper">
+                  <img src={testimonals_3} alt="image first" className="testmonials_image"/>
+                </div>
+                <div className="testimonals_desc">
+                  <p className="testimonals_text">"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.</p>
+                  <div className="line_divider"></div>
+                <div className="name_wrapper">
+                  <h2 className="name_test">Mind Risers </h2>
+                </div>
                 </div>
           </div>
-          <div className="slider_container">
-                <div className="testimonal_image">
-                  <img src={testimonals_2} alt="Testimonals Image" className="testmonials_image" />
-                </div>
-                <div className="testimonals_says">
-                  <p className="testimonal_text">A testimonial is effectively a review or recommendation from a client, letting other people know how your products or services benefitted them.</p>
-                </div>
-          </div>
-          <div className="slider_container">
-                <div className="testimonal_image">
-                  <img src={testimonals_3} alt="Testimonals Image" className="testmonials_image" />
-                </div>
-                <div className="testimonals_says">
-                  <p className="testimonal_text">A testimonial is effectively a review or recommendation from a client, letting other people know how your products or services benefitted them.</p>
-                </div>
-          </div>
-        
+         
         </Slider>
       </div>
     );
